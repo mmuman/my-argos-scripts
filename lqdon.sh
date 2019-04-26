@@ -13,7 +13,7 @@ echo " π⃝⃞  $P%"
 
 echo "---"
 
-echo "$M € / $T €"
+echo "$M € / $T €| href=https://www.laquadrature.net/donner/"
 
 echo "Donner… | href=https://don.laquadrature.net/"
 
