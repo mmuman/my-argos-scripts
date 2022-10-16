@@ -9,7 +9,11 @@ T="${R#* }"
 P="${R%% *}"
 M="$(($P * $T / 100))"
 
-echo " π⃝⃞  $P%"
+# Some Unicode magic here:
+# CF 80 = U+03C0 GREEK SMALL LETTER PI
+# e2 83 9d = U+20DD COMBINING ENCLOSING CIRCLE
+# e2 83 9e = U+20DE COMBINING ENCLOSING SQUARE
+echo -e " \xcf\x80\xe2\x83\x9d\xe2\x83\x9e  $P%"
 
 echo "---"
 
