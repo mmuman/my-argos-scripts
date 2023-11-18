@@ -4,7 +4,7 @@ url="https://www.laquadrature.net/donner/"
 
 exec 2>/dev/null
 
-R="$(wget -O - "$url" | sed -n '/^<p><span class="pourcents">/{s,^<p><span class="pourcents">,,;s,%</span> des dons .*$,,;s/[^0-9]//g;p};/réunir au moins/{s/.*réunir au moins //;s/€ supplémentaires.*//;s/[^0-9]//g;p}' | tr '\n' ' ')"
+R="$(wget -O - "$url" | sed -n '/^<p><span class="pourcents">/{s,^<p><span class="pourcents">,,;s,%</span> des dons .*$,,;s/[^0-9]//g;p};/souhaitons récolter/{s/.*souhaitons récolter //;s/€ de dons,.*//;s/[^0-9]//g;p}' | tr '\n' ' ')"
 T="${R#* }"
 P="${R%% *}"
 M="$(($P * $T / 100 / 100))"
